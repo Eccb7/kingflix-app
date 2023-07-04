@@ -1,4 +1,5 @@
 import _ from 'lodash';
+import logo from './media-library/logo.png';
 import printMe from './print.js';
 import './style.css';
 
