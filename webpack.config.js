@@ -44,7 +44,7 @@ module.exports = {
               outputPath: 'media-library',
               publicPath: 'media-library',
             },
-          }  
+          },
         ],
       },  
     ],
