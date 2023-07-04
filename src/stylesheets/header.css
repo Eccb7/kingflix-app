@@ -24,14 +24,13 @@ nav {
   display: flex;
   flex-direction: row;
   list-style: none;
-  text-decoration:  none;
+  text-decoration: none;
   justify-content: end;
   padding-top: 1rem;
 }
 
 .menuItem {
   text-decoration: none;
-  color: #231F20;
+  color: #231f20;
   padding-right: 3rem;
-
 }
