@@ -1,21 +1,10 @@
-import _ from 'lodash';
-import printMe from './print.js';
-import './style.css';
+import './stylesheets/header.css';
+import './stylesheets/footer.css';
+import './media-library/logo.png';
+import Header from './header.js';
+import Footer from './footer.js';
 
- function component() {
-   const element = document.createElement('div');
-  const btn = document.createElement('button');
+const headerSection = new Header();
+const footerSection = new Footer();
 
-   element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-   element.classList.add('hello');
-
-
-  btn.innerHTML = 'Click me and check the console!';
-  btn.onclick = printMe;
-
-  element.appendChild(btn);
-
-   return element;
- }
-
- document.body.appendChild(component());
+export { headerSection, footerSection };
