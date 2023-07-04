@@ -1,7 +1,7 @@
 const path = require('path');
-  c onst HtmlWebpackPlugin = require('html-webpack-plugin');
+  const HtmlWebpackPlugin = require('html-webpack-plugin');
  
-   m odule.exports = {
+   module.exports = {
      mode: 'development',
      entry: {
        index: './src/index.js',
