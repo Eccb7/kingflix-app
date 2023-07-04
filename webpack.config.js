@@ -7,6 +7,7 @@ const path = require('path');
      index: './src/index.js',
      print: './src/print.js',
      header: './src/header.js',
+     footer: './src/footer.js',
    },
    devtool: 'inline-source-map',
   devServer: {
