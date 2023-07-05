@@ -8,9 +8,11 @@ import './media-library/sample-img.jpg';
 import Header from './header.js';
 import Footer from './footer.js';
 import Ratings from './ratings.js';
+import Home from "./home";
 
 const headerSection = new Header();
+const homeSection = new Home();
 const footerSection = new Footer();
 const ratingsModal = new Ratings();
 
-export { headerSection, footerSection, ratingsModal };
+export { headerSection, footerSection, ratingsModal, homeSection };

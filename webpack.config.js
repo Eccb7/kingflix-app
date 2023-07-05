@@ -1,5 +1,5 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const path = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: 'development',
@@ -47,13 +47,11 @@ module.exports = {
               name: '[name].[ext]',
               outputPath: 'media-library',
               publicPath: 'media-library',
+
             },
-          },
         ],
-      },
-    ],
-  },
-  optimization: {
-    runtimeChunk: 'single',
-  },
+    },
+    optimization: {
+        runtimeChunk: "single",
+    },
 };
