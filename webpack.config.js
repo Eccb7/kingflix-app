@@ -5,7 +5,7 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
+    ratings: './src/ratings.js',
     header: './src/header.js',
     footer: './src/footer.js',
   },
@@ -27,6 +27,10 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.html$/i,
+        loader: "html-loader",
+      },
+      {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
       },
@@ -40,7 +44,7 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              name: 'logo.png',
+              name: '[name].[ext]',
               outputPath: 'media-library',
               publicPath: 'media-library',
             },

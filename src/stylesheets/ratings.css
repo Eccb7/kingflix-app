@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500&display=swap');
+
+.ratingsSection {
+  display: flex;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  background-color: rgb(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 5rem 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.ratingsContainer {
+  background-color: #fff;
+  border: 2px solid #5800ff;
+  padding: 3.8rem;
+  height: fit-content;
+  width: 38rem;
+  margin: auto;
+  color: rgb(46, 46, 46);
+  font-size: 0.8rem;
+}
+
+.close-icon {
+  text-align: right;
+}
+
+.movieImage {
+  margin-bottom: 2rem;
+}
+
+.movieTitle {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.headings {
+  margin-bottom: 0.8rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1.9px solid #231f201c;
+  color: #5800ff;
+}
+
+.sectionContainers {
+  padding: 1rem;
+  box-shadow: 1px 1px 6px 1px rgb(0, 0, 0, 0.1);
+  margin-top: 3rem;
+}
+
+.formFields {
+  display: block;
+  width: 80%;
+  height: 3rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  border: 1.4px solid rgba(35, 31, 32, 0.124);
+  padding-left: 1rem;
+  font-size: 1rem;
+}
+
+.submitBtn {
+  display: flex;
+  background-color: #5800ff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+.star-rating {
+  display: block;
+  margin-bottom: 2rem;
+  padding-left: 1rem;
+}
+
+.giveRatingText {
+  padding-bottom: 0.6rem;
+}
+
+.star-rating input {
+  display: none;
+}
+
+label {
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  background-image: url('https://dl.dropboxusercontent.com/s/1oh3h6o20k4285x/star-empty.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 6px 1px rgb(0, 0, 0, 0.1);
+} 
+
+.star-rating input:checked + label {
+  background-image: url('https://dl.dropboxusercontent.com/s/oij2qr7r2ulfi4i/star-filled.png');
+}
