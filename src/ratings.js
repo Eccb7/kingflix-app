@@ -39,7 +39,7 @@ export default class Ratings {
             <label for="star-5"></label>
           </div>
     
-          <input class="submitBtn" type="submit">
+          <input class="submitBtn" type="submit" value="Post Rating">
         </form>
       </div>
     </div>`;

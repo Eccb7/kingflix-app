@@ -34,22 +34,25 @@
   margin-bottom: 2rem;
 }
 
-.movieTitle {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
 .headings {
   margin-bottom: 0.8rem;
   padding-bottom: 0.5rem;
-  border-bottom: 1.9px solid #231f201c;
+  border-bottom: 1.9px solid #ffffff59;
+  color: #fff;
+}
+
+.movieTitle {
+  font-size: 2rem;
+  font-weight: 700;
   color: #5800ff;
 }
 
 .sectionContainers {
   padding: 1rem;
-  box-shadow: 1px 1px 6px 1px rgb(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px 1px rgb(0, 0, 0, 0.3);
   margin-top: 3rem;
+  background-color: #5800ff;
+  color: #fff;
 }
 
 .formFields {
@@ -65,11 +68,12 @@
 
 .submitBtn {
   display: flex;
-  background-color: #5800ff;
+  background-color: #fff;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 0.5rem;
-  color: #fff;
+  color: #5800ff;
+  box-shadow: 1px 1px 3px 1px rgb(0, 0, 0, 0.3);
 }
 
 .star-rating {
@@ -95,7 +99,7 @@ label {
   background-repeat: no-repeat;
   background-position: center;
   cursor: pointer;
-  box-shadow: 1px 1px 6px 1px rgb(0, 0, 0, 0.1);
+  box-shadow: 1px 1px 3px 1px rgb(0, 0, 0, 0.3);
 }
 
 .star-rating input:checked + label {
