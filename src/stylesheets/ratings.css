@@ -18,7 +18,7 @@
   background-color: #fff;
   border: 2px solid #5800ff;
   padding: 3.8rem;
-  height: fit-content;
+  min-height: fit-content;
   width: 38rem;
   margin: auto;
   color: rgb(46, 46, 46);
@@ -95,7 +95,7 @@ label {
   background-position: center;
   cursor: pointer;
   box-shadow: 1px 1px 6px 1px rgb(0, 0, 0, 0.1);
-} 
+}
 
 .star-rating input:checked + label {
   background-image: url('https://dl.dropboxusercontent.com/s/oij2qr7r2ulfi4i/star-filled.png');

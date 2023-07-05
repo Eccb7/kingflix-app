@@ -42,7 +42,7 @@ export default class Ratings {
           <input class="submitBtn" type="submit">
         </form>
       </div>
-    </div>`
+    </div>`;
 
     this.body.appendChild(ratingsSection);
   }
