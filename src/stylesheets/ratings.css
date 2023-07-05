@@ -15,10 +15,11 @@
 }
 
 .ratingsContainer {
+  display: flex;
+  flex-direction: column;
   background-color: #fff;
   border: 2px solid #5800ff;
   padding: 3.8rem;
-  min-height: fit-content;
   width: 38rem;
   margin: auto;
   color: rgb(46, 46, 46);
