@@ -1,11 +1,11 @@
-import getShows from "./getShows";
+import getShows from './getShows.js';
 
 export default class Home {
-    constructor() {
-        this.renderPosts();
-    }
+  constructor() {
+    this.renderPosts();
+  }
 
-    renderPosts() {
-        getShows();
-    }
+  renderPosts() {
+    getShows.bind(this)();
+  }
 }
