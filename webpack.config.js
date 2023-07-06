@@ -8,6 +8,8 @@ module.exports = {
     ratings: './src/ratings.js',
     header: './src/header.js',
     footer: './src/footer.js',
+    home: './src/home.js',
+    getShows: './src/getShows.js',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -47,10 +49,12 @@ module.exports = {
               name: '[name].[ext]',
               outputPath: 'media-library',
               publicPath: 'media-library',
-
             },
+          },
         ],
-    },
+      },
+    ],
+  },
     optimization: {
         runtimeChunk: "single",
     },

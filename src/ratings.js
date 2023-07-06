@@ -1,7 +1,7 @@
 export default class Ratings {
   constructor() {
     this.body = document.querySelector('body');
-    this.createRatingsModal();
+    this.viewRatingsBtns = document.getElementsByClassName('viewRatings');
   }
 
   createRatingsModal() {
@@ -45,5 +45,23 @@ export default class Ratings {
     </div>`;
 
     this.body.appendChild(ratingsSection);
+  }
+
+  closeRatingModal(ratingCloseBtns) {
+    const ratingsSections = document.querySelectorAll('.ratingsSection');
+    ratingCloseBtns.forEach((each) => each.addEventListener('click', () => {
+      ratingsSections.forEach((each) => each.style.display = 'none')
+    }))
+  }
+
+  showrating() {
+    const btnsArray = Array.from(this.viewRatingsBtns);
+    btnsArray.forEach((each) => {
+      each.addEventListener('click', () => {
+        this.createRatingsModal();
+        const ratingCloseBtns = document.querySelectorAll('.close-icon');
+        this.closeRatingModal(ratingCloseBtns);
+      })
+    })
   }
 }
