@@ -72,7 +72,8 @@ const createModal = (movie) => {
   const updateComments = async () => {
     try {
       const comments = await getComments(movie.id);
-      commentsCounter.innerText = `${comments.length} Comments`;
+      const commentsCounter = document.getElementById('comments-counter');
+      commentsCounter.textContent = `Comments (${comments.length})`;
       commentsList.innerHTML = '';
 
       comments.forEach((comment) => {
