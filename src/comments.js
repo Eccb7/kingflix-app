@@ -1,7 +1,7 @@
 const getComments = async (itemId) => {
   try {
     const response = await fetch(
-      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/:XTyHQABn3ej42SK28nbc/comments?item_id=${itemId}`,
+      `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XTyHQABn3ej42SK28nbc/comments?item_id=${itemId}`,
     );
 
     if (!response.ok) {
@@ -18,7 +18,7 @@ const getComments = async (itemId) => {
 const createComment = async (itemId, username, comment) => {
   try {
     const response = await fetch(
-      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/:XTyHQABn3ej42SK28nbc/comments',
+      'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XTyHQABn3ej42SK28nbc/comments',
       {
         method: 'POST',
         body: JSON.stringify({
