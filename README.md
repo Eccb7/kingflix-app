@@ -30,7 +30,7 @@ After you're finished please remove all the comments and instructions.
   <img src="https://dl.dropboxusercontent.com/s/110axfscx8e9q3q/Screenshot%202023-04-27%20024351.png" alt="logo" width=""  height="auto" />
   <br/>
 
-  <h3><b>A Personal Portfolio Site</b></h3>
+  <h3><b>The Kingflix WebApp</b></h3>
 
 </div>
 
@@ -193,6 +193,12 @@ You can deploy this project using the following procedure:
 - Twitter: [@Geekelo_xyz](https://twitter.com/Geekelo_xyz)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/eloghene-otiede)
 - [See Documentation of Author's inputs](./Documentation/Geekelo-input.md)
+
+👤 **Ojwang Briton**
+
+- GitHub: [@Eccb7](https://github.com/Eccb7)
+- Twitter: [@briton_otieno4](https://twitter.com/briton_otieno4)
+- LinkedIn: [briton-otieno-ba6591244](https://linkedin.com/in/briton-otieno-ba6591244)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

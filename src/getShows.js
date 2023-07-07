@@ -1,5 +1,6 @@
 import getLikes from './getLikes.js';
 import setLike from './likes.js';
+import createModal from './modal.js';
 
 const getShows = async () => {
   const homeContainer = document.querySelector('.homepage');
@@ -61,9 +62,14 @@ const getShows = async () => {
       } else {
         numberOfLikes.textContent = `${singleLike} Likes`;
       }
+
+      button1.addEventListener('click', () => {
+        createModal(movie);
+      });
     });
   } catch (error) {
     throw new Error('Unable to fetch');
   }
 };
+
 export default getShows;
