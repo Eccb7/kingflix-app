@@ -1,7 +1,7 @@
 import Reservations from '../src/reservationModal/reservations.js';
 
 // Mock the FetchReservations class
-jest.mock('../src/fetchReservations.js', () => jest.fn().mockImplementation(() => (
+jest.mock('../src/reservationModal/fetchReservations.js', () => jest.fn().mockImplementation(() => (
   {
     fetchReservationsData: jest.fn().mockResolvedValue(
       [

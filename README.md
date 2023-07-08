@@ -40,7 +40,7 @@ After you're finished please remove all the comments and instructions.
 
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Webpack-demo Template ](#-webpack-demo-template-)
+- [📖 The Kingflix WebApp ](#-the-kingflix-webapp-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -61,7 +61,7 @@ After you're finished please remove all the comments and instructions.
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Webpack-demo Template <a name="about-project"></a>
+# 📖 The Kingflix WebApp <a name="about-project"></a>
 
 **The Kingflix WebApp** aims to provide an enjoyable and interactive platform for movie enthusiasts. It offers a visually captivating experience, allowing users to like and comment on movie pictures, fostering engagement and promoting discussions within the community. The project will leverage web development technologies such as HTML, CSS, and JavaScript to create the frontend interface and may involve backend technologies to handle user authentication, data storage, and retrieval.
 
