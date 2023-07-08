@@ -1,4 +1,4 @@
-import DisplayAfterPost from '../reservationModal/displayReservation.js';
+import DisplayAfterPost from './displayReservation.js';
 
 export default class PostResevation {
   constructor() {
@@ -13,10 +13,10 @@ export default class PostResevation {
   async postReservation(item_id, username, date_start, date_end) {
     try {
       const data = {
-        item_id: item_id,
-        username: username,
-        date_start: date_start,
-        date_end: date_end,
+        item_id,
+        username,
+        date_start,
+        date_end,
       };
 
       const response = await fetch(
@@ -55,9 +55,6 @@ export default class PostResevation {
       const date_end = valueendDate.value;
 
       this.postReservation(item_id, username, date_start, date_end);
-      console.log(item_id, username, date_start, date_end)
     }));
-
-
   }
 }
