@@ -14,8 +14,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: "18.x"
-      - name: Setup Lighthouse
-        run: npm install -g @lhci/cli@0.11.x
   webhint:
     name: Webhint
     runs-on: ubuntu-22.04
