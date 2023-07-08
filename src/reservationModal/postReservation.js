@@ -10,13 +10,13 @@ export default class PostResevation {
     this.setupListener();
   }
 
-  async postReservation(item_id, username, date_start, date_end) {
+  async postReservation(itemId, username, dateStart, dateEnd) {
     try {
       const data = {
-        item_id,
-        username,
-        date_start,
-        date_end,
+        item_id: itemId,
+        username: username,
+        date_start: dateStart,
+        date_end: dateEnd,
       };
 
       const response = await fetch(
@@ -49,12 +49,12 @@ export default class PostResevation {
     this.reservationForm.forEach((each) => each.addEventListener('submit', (e) => {
       e.preventDefault();
 
-      const item_id = `item${this.movieId}`;
+      const itemId = `item${this.movieId}`;
       const username = valueusername.value;
-      const date_start = valuestartDate.value;
-      const date_end = valueendDate.value;
+      const dateStart = valuestartDate.value;
+      const dateEnd = valueendDate.value;
 
-      this.postReservation(item_id, username, date_start, date_end);
+      this.postReservation(itemId, username, dateStart, dateEnd);
     }));
   }
 }
