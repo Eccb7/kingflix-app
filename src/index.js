@@ -6,7 +6,7 @@ import './media-library/star-filled.png';
 import './media-library/star-empty.png';
 import './media-library/logo.png';
 import './media-library/sample-img.jpg';
-import Home from "./home.js";
+import Home from './home.js';
 import Header from './header.js';
 import Footer from './footer.js';
 import PullMoviesData from './pullMovies.js';
