@@ -60,6 +60,13 @@ export default class Reservations {
     }))
   }
 
+  updateCounter(fetchedReservationArr) {
+    // Updates counter
+    this.reservationCount = fetchedReservationArr.length;
+    const reservationsHeading = document.querySelectorAll('.reservationsHeading');
+    reservationsHeading.forEach((each) => each.textContent = `Reservations (${this.reservationCount}):`)
+  }
+
   async displayReservations(index) {
     const fetchReservations = new FetchReservations();
     fetchReservations.movieID = index;
@@ -68,15 +75,15 @@ export default class Reservations {
     const existingReservations = document.querySelectorAll('.existingReservations');
   
     // Clear existing reservations
-    existingReservations.innerHTML = '';
-    this.reservationCount = fetchedReservationArr.length;
-    const reservationsHeading = document.querySelectorAll('.reservationsHeading');
-    reservationsHeading.forEach((each) => each.textContent = `Reservations (${this.reservationCount})`)
+    existingReservations.forEach((each) => each.innerHTML = '');
+    this.updateCounter(fetchedReservationArr);
 
     fetchedReservationArr.forEach((each) => {
       const reservation = document.createElement('p');
       reservation.textContent =  `${each.date_start} - ${each.date_end} by ${each.username}`;
-      existingReservations.forEach((each) => each.appendChild(reservation))
+      existingReservations.forEach((each) => {
+        each.appendChild(reservation)
+      })
     });
   }
 
