@@ -11,7 +11,6 @@ module.exports = {
     home: './src/home/home.js',
     getShows: './src/home/getShows.js',
     pullMoviesData: './src/reservationModal/pullMovies.js',
-    postResevations: './src/reservationModal/postReservations.js',
     fetchReservations: './src/reservationModal/fetchReservations.js',
   },
   devtool: 'inline-source-map',
