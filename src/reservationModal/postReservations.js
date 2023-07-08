@@ -21,24 +21,18 @@ export default class PostResevation {
           },
         },
       );
-  
-      if (response.ok) {
-        console.log("ok");
-      }
     } catch (error) {
       throw new Error('Unable to post');
     }
-  
+
     // update displayed reservations
     const loadReservations = new Reservations();
     loadReservations.displayReservations(this.movieId);
   }
 
   setupListener(){
-    console.log(this.movieId);
     this.reservationForm.addEventListener('submit', (e) => {
       e.preventDefault();
-      console.log(this.movieId);
       const data = {
         item_id: `item${this.movieId}`,
         username: this.username.value,
@@ -51,5 +45,5 @@ export default class PostResevation {
       this.startDate.value = '';
       this.endDate.value = '';
     })
-  }
-}
+  };
+};

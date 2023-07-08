@@ -50,15 +50,14 @@ export default class Reservations {
     const postReservationData = new PostReservation();
     postReservationData.movieId = index;
     postReservationData.setupListener();
-
   }
 
   closeReservationModal(reservationCloseBtns) {
     this.reservationsSections = document.querySelectorAll('.reservationsSection');
     reservationCloseBtns.forEach((each) => each.addEventListener('click', () => {
-    this.reservationsSections.forEach((each) => each.style.display = 'none');
+      this.reservationsSections.forEach((each) => each.style.display = 'none');
     }))
-  }
+  };
 
   updateCounter(fetchedReservationArr) {
     // Updates counter
