@@ -1,15 +1,15 @@
-import Reservations from "./reservations";
+import Reservations from './reservations.js';
 
 export default class PostResevation {
-    constructor() {
-      this.reservationForm = document.querySelector('.reservationForm');
-      this.username = document.querySelector('#username');
-      this.startDate = document.querySelector('#startDate');
-      this.endDate = document.querySelector('#endDate');
-      this.movieId = 0;
-    }
+  constructor() {
+    this.reservationForm = document.querySelector('.reservationForm');
+    this.username = document.querySelector('#username');
+    this.startDate = document.querySelector('#startDate');
+    this.endDate = document.querySelector('#endDate');
+    this.movieId = 0;
+  }
 
-    async postReservation(data) {
+  async postReservation(data) {
     try {
       const response = await fetch(
         'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XTyHQABn3ej42SK28nbc/reservations',
@@ -28,7 +28,7 @@ export default class PostResevation {
     } catch (error) {
       throw new Error('Unable to post');
     }
-
+  
     // update displayed reservations
     const loadReservations = new Reservations();
     loadReservations.displayReservations(this.movieId);
@@ -44,7 +44,8 @@ export default class PostResevation {
         username: this.username.value,
         date_start: this.startDate.value,
         date_end: this.endDate.value,
-      }
+      };
+
       this.postReservation(data);
       this.username.value = '';
       this.startDate.value = '';

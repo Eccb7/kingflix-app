@@ -1,4 +1,4 @@
-import updateMyLikes from '../likes/updateLikes.js';
+import updateMyLikes from './updateLikes.js';
 
 const setLike = async (movie, likes) => {
   try {

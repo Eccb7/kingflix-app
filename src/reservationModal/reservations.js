@@ -43,7 +43,7 @@ export default class Reservations {
       </div>
     </div>`;
     this.body.appendChild(reservationsSection);
-    
+
     const reservationCloseBtns = document.querySelectorAll('.close-icon');
     this.closeReservationModal(reservationCloseBtns);
 
@@ -54,9 +54,9 @@ export default class Reservations {
   }
 
   closeReservationModal(reservationCloseBtns) {
-    const reservationsSections = document.querySelectorAll('.reservationsSection');
+    this.reservationsSections = document.querySelectorAll('.reservationsSection');
     reservationCloseBtns.forEach((each) => each.addEventListener('click', () => {
-    reservationsSections.forEach((each) => each.style.display = 'none');
+    this.reservationsSections.forEach((each) => each.style.display = 'none');
     }))
   }
 
@@ -64,7 +64,7 @@ export default class Reservations {
     // Updates counter
     this.reservationCount = fetchedReservationArr.length;
     const reservationsHeading = document.querySelectorAll('.reservationsHeading');
-    reservationsHeading.forEach((each) => each.textContent = `Reservations (${this.reservationCount}):`)
+    reservationsHeading.forEach((each) => each.textContent = `Reservations (${this.reservationCount}):`);
   }
 
   async displayReservations(index) {
@@ -73,7 +73,7 @@ export default class Reservations {
     const fetchedReservation = await fetchReservations.fetchReservationsData();
     const fetchedReservationArr = Array.from(fetchedReservation);
     const existingReservations = document.querySelectorAll('.existingReservations');
-  
+
     // Clear existing reservations
     existingReservations.forEach((each) => each.innerHTML = '');
     this.updateCounter(fetchedReservationArr);
@@ -82,18 +82,18 @@ export default class Reservations {
       const reservation = document.createElement('p');
       reservation.textContent =  `${each.date_start} - ${each.date_end} by ${each.username}`;
       existingReservations.forEach((each) => {
-        each.appendChild(reservation)
-      })
+        each.appendChild(reservation);
+      });
     });
   }
 
-    showReservations() {
+  showReservations() {
     const btnsArray = Array.from(this.viewReservationsBtns);
     btnsArray.forEach((each, eachindex) => {
       each.addEventListener('click', () => {
         this.createReservationsModal(eachindex);
         this.displayReservations(eachindex);
-      })
-    })
+      });
+    });
   }
 }

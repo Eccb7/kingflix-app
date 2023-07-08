@@ -24,6 +24,6 @@ const reservationsModal = new Reservations();
 const footerSection = new Footer();
 
 export {
-    headerSection, footerSection, getMoviesData, reservationsModal, homeSection, postReservationData,
-    fetchedReservationData
+  headerSection, footerSection, getMoviesData, reservationsModal, homeSection,
+  postReservationData, fetchedReservationData
 };
