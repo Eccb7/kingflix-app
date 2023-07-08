@@ -33,7 +33,7 @@ const createComment = async (itemId, username, comment) => {
     );
 
     if (response.status === 201) {
-    //   console.log('Comment created successfully');
+    // means Comment created successfully;
     } else {
       throw new Error(`Failed to create comment: ${response.status}`);
     }
