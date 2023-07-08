@@ -44,9 +44,9 @@
         
             
             <div class='fl pad1y space-right2'>
-                <span class="strong">55% </span>
+                <span class="strong">54.54% </span>
                 <span class="quiet">Lines</span>
-                <span class='fraction'>22/40</span>
+                <span class='fraction'>24/44</span>
             </div>
         
             
@@ -162,7 +162,14 @@
 <a name='L97'></a><a href='#L97'>97</a>
 <a name='L98'></a><a href='#L98'>98</a>
 <a name='L99'></a><a href='#L99'>99</a>
-<a name='L100'></a><a href='#L100'>100</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a></td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -217,11 +224,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -229,17 +247,13 @@
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
@@ -262,7 +276,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import PullMoviesData from './pullMovies.js';
-import PostReservation from './postReservations.js';
+import PostReservation from './postReservation.js';
 import FetchReservations from './fetchReservations.js';
 &nbsp;
 export default class Reservations {
@@ -306,28 +320,33 @@ export default class Reservations {
       &lt;/div&gt;
     &lt;/div&gt;`;
 <span class="cstat-no" title="statement not covered" >    this.body.appendChild(reservationsSection);</span>
-    
+&nbsp;
     const reservationCloseBtns = <span class="cstat-no" title="statement not covered" >document.querySelectorAll('.close-icon');</span>
 <span class="cstat-no" title="statement not covered" >    this.closeReservationModal(reservationCloseBtns);</span>
 &nbsp;
     const postReservationData = <span class="cstat-no" title="statement not covered" >new PostReservation();</span>
 <span class="cstat-no" title="statement not covered" >    postReservationData.movieId = index;</span>
 <span class="cstat-no" title="statement not covered" >    postReservationData.setupListener();</span>
-&nbsp;
   }
 &nbsp;
 <span class="fstat-no" title="function not covered" >  cl</span>oseReservationModal(reservationCloseBtns) {
-    const reservationsSections = <span class="cstat-no" title="statement not covered" >document.querySelectorAll('.reservationsSection');</span>
-<span class="cstat-no" title="statement not covered" >    reservationCloseBtns.forEach(<span class="fstat-no" title="function not covered" >(e</span>ach) =&gt; <span class="cstat-no" title="statement not covered" >each.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span></span>
-<span class="cstat-no" title="statement not covered" >    reservationsSections.forEach(<span class="fstat-no" title="function not covered" >(e</span>ach) =&gt; <span class="cstat-no" title="statement not covered" >each.style.display = 'none')</span>;</span>
-    }))
+<span class="cstat-no" title="statement not covered" >    this.reservationsSections = document.querySelectorAll('.reservationsSection');</span>
+<span class="cstat-no" title="statement not covered" >    reservationCloseBtns.forEach(<span class="fstat-no" title="function not covered" >(e</span>ach) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      each.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >        this.reservationsSections.forEach(<span class="fstat-no" title="function not covered" >(e</span>ach) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          each.style.display = 'none';</span>
+        });
+      });
+    });
   }
 &nbsp;
   updateCounter(fetchedReservationArr) {
     // Updates counter
     this.reservationCount = fetchedReservationArr.length;
     const reservationsHeading = document.querySelectorAll('.reservationsHeading');
-    reservationsHeading.forEach((each) =&gt; each.textContent = `Reservations (${this.reservationCount}):`)
+    reservationsHeading.forEach((each) =&gt; {
+      each.textContent = `Reservations (${this.reservationCount}):`;
+    });
   }
 &nbsp;
   async displayReservations(index) {
@@ -336,28 +355,30 @@ export default class Reservations {
     const fetchedReservation = await fetchReservations.fetchReservationsData();
     const fetchedReservationArr = Array.from(fetchedReservation);
     const existingReservations = document.querySelectorAll('.existingReservations');
-  
+&nbsp;
     // Clear existing reservations
-    existingReservations.forEach((each) =&gt; each.innerHTML = '');
+    existingReservations.forEach((each) =&gt; {
+      each.innerHTML = '';
+    });
     this.updateCounter(fetchedReservationArr);
 &nbsp;
     fetchedReservationArr.forEach((each) =&gt; {
       const reservation = document.createElement('p');
-      reservation.textContent =  `${each.date_start} - ${each.date_end} by ${each.username}`;
+      reservation.textContent = `${each.date_start} - ${each.date_end} by ${each.username}`;
       existingReservations.forEach((each) =&gt; {
-        each.appendChild(reservation)
-      })
+        each.appendChild(reservation);
+      });
     });
   }
 &nbsp;
-    showReservations() {
+  showReservations() {
     const btnsArray = Array.from(this.viewReservationsBtns);
     btnsArray.forEach(<span class="fstat-no" title="function not covered" >(e</span>ach, eachindex) =&gt; {
 <span class="cstat-no" title="statement not covered" >      each.addEventListener('click', <span class="fstat-no" title="function not covered" >()</span> =&gt; {</span>
 <span class="cstat-no" title="statement not covered" >        this.createReservationsModal(eachindex);</span>
 <span class="cstat-no" title="statement not covered" >        this.displayReservations(eachindex);</span>
-      })
-    })
+      });
+    });
   }
 }
 &nbsp;</pre></td></tr></table></pre>
@@ -367,7 +388,7 @@ export default class Reservations {
             <div class='footer quiet pad2 space-top1 center small'>
                 Code coverage generated by
                 <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
-                at 2023-07-08T09:25:33.861Z
+                at 2023-07-08T18:25:54.564Z
             </div>
         <script src="prettify.js"></script>
         <script>
