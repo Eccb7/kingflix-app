@@ -1,4 +1,4 @@
-import movieNum from '../src/movieLength.js';
+import movieNum from '../src/home/movieLength.js';
 
 jest.mock('node-fetch');
 

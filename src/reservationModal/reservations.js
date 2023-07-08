@@ -1,5 +1,4 @@
 import PullMoviesData from './pullMovies.js';
-import PostReservation from './postReservations.js';
 import FetchReservations from './fetchReservations.js';
 
 export default class Reservations {
@@ -8,7 +7,12 @@ export default class Reservations {
     this.viewReservationsBtns = document.getElementsByClassName('viewReservations');
     this.fetchReservations = new FetchReservations();
     this.reservationCount = 0;
-    this.showReservations();
+    this.movieID = 0;
+
+    this.reservationForm = document.querySelectorAll('.reservationForm');
+    this.username = document.querySelector('#username');
+    this.startDate = document.querySelector('#startDate');
+    this.endDate = document.querySelector('#endDate');
   }
 
   async createReservationsModal(index) {
@@ -43,28 +47,25 @@ export default class Reservations {
       </div>
     </div>`;
     this.body.appendChild(reservationsSection);
-    
+
     const reservationCloseBtns = document.querySelectorAll('.close-icon');
     this.closeReservationModal(reservationCloseBtns);
 
-    const postReservationData = new PostReservation();
-    postReservationData.movieId = index;
-    postReservationData.setupListener();
-
+    this.setupListener();
   }
 
   closeReservationModal(reservationCloseBtns) {
-    const reservationsSections = document.querySelectorAll('.reservationsSection');
-    reservationCloseBtns.forEach((each) => each.addEventListener('click', () => {
-    reservationsSections.forEach((each) => each.style.display = 'none');
-    }))
+    this.reservationsSections = document.querySelectorAll('.reservationsSection');
+    reservationCloseBtns.forEach((each, position) => each.addEventListener('click', () => {
+      this.reservationsSections[position].style.display = 'none';
+    }));
   }
 
   updateCounter(fetchedReservationArr) {
     // Updates counter
     this.reservationCount = fetchedReservationArr.length;
-    const reservationsHeading = document.querySelectorAll('.reservationsHeading');
-    reservationsHeading.forEach((each) => each.textContent = `Reservations (${this.reservationCount}):`)
+    const reservationsHeading = document.querySelector('.reservationsHeading');
+    reservationsHeading.textContent = `Reservations (${this.reservationCount}):`;
   }
 
   async displayReservations(index) {
@@ -73,27 +74,68 @@ export default class Reservations {
     const fetchedReservation = await fetchReservations.fetchReservationsData();
     const fetchedReservationArr = Array.from(fetchedReservation);
     const existingReservations = document.querySelectorAll('.existingReservations');
-  
+
     // Clear existing reservations
-    existingReservations.forEach((each) => each.innerHTML = '');
+    existingReservations.forEach((each) => {
+      each.innerHTML = '';
+    });
     this.updateCounter(fetchedReservationArr);
 
     fetchedReservationArr.forEach((each) => {
       const reservation = document.createElement('p');
-      reservation.textContent =  `${each.date_start} - ${each.date_end} by ${each.username}`;
+      reservation.textContent = `${each.date_start} - ${each.date_end} by ${each.username}`;
       existingReservations.forEach((each) => {
-        each.appendChild(reservation)
-      })
+        each.appendChild(reservation);
+      });
     });
   }
 
-    showReservations() {
+  showReservations() {
     const btnsArray = Array.from(this.viewReservationsBtns);
     btnsArray.forEach((each, eachindex) => {
       each.addEventListener('click', () => {
+        this.movieID = eachindex;
         this.createReservationsModal(eachindex);
         this.displayReservations(eachindex);
-      })
-    })
+        this.setupListener(eachindex);
+      });
+    });
+  }
+
+  // post data
+  async postReservation(data, id) {
+    try {
+      await fetch(
+        'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XTyHQABn3ej42SK28nbc/reservations',
+        {
+          method: 'POST',
+          headers: {
+            'Content-type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        },
+      );
+    } catch (error) {
+      // return null;
+    }
+
+    this.displayReservations(id);
+  }
+
+  setupListener(id) {
+    this.reservationForm.forEach((each) => each.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = {
+        item_id: `item${id}`,
+        username: this.username.value,
+        date_start: this.startDate.value,
+        date_end: this.endDate.value,
+      };
+
+      this.postReservation(data, id);
+      this.username.value = '';
+      this.startDate.value = '';
+      this.endDate.value = '';
+    }));
   }
 }

@@ -11,7 +11,6 @@ import Home from './home/home.js';
 import Header from './home/header.js';
 import Footer from './home/footer.js';
 import PullMoviesData from './reservationModal/pullMovies.js';
-import PostReservation from './reservationModal/postReservations.js';
 import FetchReservations from './reservationModal/fetchReservations.js';
 import Reservations from './reservationModal/reservations.js';
 
@@ -19,11 +18,10 @@ const homeSection = new Home();
 const headerSection = new Header();
 const getMoviesData = new PullMoviesData();
 const fetchedReservationData = new FetchReservations();
-const postReservationData = new PostReservation();
 const reservationsModal = new Reservations();
 const footerSection = new Footer();
 
 export {
-    headerSection, footerSection, getMoviesData, reservationsModal, homeSection, postReservationData,
-    fetchedReservationData
+  headerSection, footerSection, getMoviesData, reservationsModal, homeSection,
+  fetchedReservationData,
 };

@@ -120,6 +120,7 @@ Head to the <a href="#live-demo">LIVE DEMO SECTION</a> for Live links and presen
 > View the live demo of this project by clicking the text below.
 
 - [See Live Demo](https://geekelo.github.io/kingflix/dist)
+- [See Project Presentation video](https://clipchamp.com/watch/HixcadFOWWc)
 <!-- - [First Presenation Video](https://www.loom.com/share/719c333faa524c5db6930878f33b809b) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
