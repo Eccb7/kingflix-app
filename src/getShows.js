@@ -1,8 +1,8 @@
-import Ratings from './ratings';
+import Reservations from './reservations';
 
 const getShows = async () => {
   const homeContainer = document.querySelector(".homepage");
-  const ratingModal = new Ratings();
+  const reservationsModal = new Reservations();
   try {
     const response = await fetch("https://api.tvmaze.com/shows/1/episodes");
     if (!response.ok) {
@@ -28,8 +28,8 @@ const getShows = async () => {
       button1.className = "btn";
       button1.innerText = "Comments";
       const button2 = document.createElement("button");
-      button2.className = "btn viewRatings";
-      button2.innerText = "View Ratings";
+      button2.className = "btn viewReservations";
+      button2.innerText = "Reservations";
       body.appendChild(images);
       body.appendChild(likes);
       body.appendChild(button1);
@@ -39,6 +39,6 @@ const getShows = async () => {
   } catch (error) {
       throw new Error("Unable to post");
   }
-  ratingModal.showrating();
+  reservationsModal.showReservations();
 };
 export default getShows;

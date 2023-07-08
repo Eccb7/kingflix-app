@@ -5,11 +5,14 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    ratings: './src/ratings.js',
+    reservations: './src/reservations.js',
     header: './src/header.js',
     footer: './src/footer.js',
     home: './src/home.js',
     getShows: './src/getShows.js',
+    pullMoviesData: './src/pullMovies.js',
+    postResevations: './src/postReservations.js',
+    fetchReservations: './src/fetchReservations.js',
   },
   devtool: 'inline-source-map',
   devServer: {
