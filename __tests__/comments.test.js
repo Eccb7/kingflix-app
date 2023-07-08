@@ -1,5 +1,5 @@
-import updateComments from './modal.js';
-import { getComments } from './comments.js';
+import updateComments from '../src/commentsModal/modal.js';
+import { getComments } from '../src/commentsModal/comments.js';
 
 jest.mock('./comments.js');
 

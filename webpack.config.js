@@ -5,9 +5,14 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    print: './src/print.js',
-    header: './src/header.js',
-    footer: './src/footer.js',
+    reservations: './src/reservationModal/reservations.js',
+    header: './src/home/header.js',
+    footer: './src/home/footer.js',
+    home: './src/home/home.js',
+    getShows: './src/home/getShows.js',
+    pullMoviesData: './src/reservationModal/pullMovies.js',
+    postResevations: './src/reservationModal/postReservations.js',
+    fetchReservations: './src/reservationModal/fetchReservations.js',
   },
   devtool: 'inline-source-map',
   devServer: {

@@ -1,18 +1,18 @@
-import getLikes from './getLikes.js';
-import setLike from './likes.js';
-import createModal from './modal.js';
+import Reservations from '../reservationModal/reservations.js';
+import getLikes from '../likes/getLikes.js';
+import setLike from '../likes/likes.js';
+import createModal from '../commentsModal/modal.js';
 
 const getShows = async () => {
   const homeContainer = document.querySelector('.homepage');
+  const reservationsModal = new Reservations();
   const likesData = await getLikes();
 
   try {
     const response = await fetch('https://api.tvmaze.com/shows/1/episodes');
-
     if (!response.ok) {
       throw new Error(`Failed to fetch scores: ${response.status}`);
     }
-
     const json = await response.json();
 
     json.forEach((movie) => {
@@ -35,7 +35,7 @@ const getShows = async () => {
       button1.className = 'btn';
       button1.innerText = 'Comments';
       const button2 = document.createElement('button');
-      button2.className = 'btn';
+      button2.className = 'btn viewReservations';
       button2.innerText = 'Reservations';
 
       body.appendChild(images);
@@ -70,6 +70,7 @@ const getShows = async () => {
   } catch (error) {
     throw new Error('Unable to fetch');
   }
+  reservationsModal.showReservations();
 };
 
 export default getShows;
