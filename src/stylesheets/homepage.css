@@ -42,6 +42,10 @@
   justify-content: space-around;
 }
 
+.like-num {
+  color: red;
+}
+
 .love-btn {
   border: 1px solid black;
 }

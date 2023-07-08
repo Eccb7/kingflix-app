@@ -5,14 +5,14 @@ module.exports = {
   mode: 'development',
   entry: {
     index: './src/index.js',
-    reservations: './src/reservations.js',
-    header: './src/header.js',
-    footer: './src/footer.js',
-    home: './src/home.js',
-    getShows: './src/getShows.js',
-    pullMoviesData: './src/pullMovies.js',
-    postResevations: './src/postReservations.js',
-    fetchReservations: './src/fetchReservations.js',
+    reservations: './src/reservationModal/reservations.js',
+    header: './src/home/header.js',
+    footer: './src/home/footer.js',
+    home: './src/home/home.js',
+    getShows: './src/home/getShows.js',
+    pullMoviesData: './src/reservationModal/pullMovies.js',
+    postResevations: './src/reservationModal/postReservations.js',
+    fetchReservations: './src/reservationModal/fetchReservations.js',
   },
   devtool: 'inline-source-map',
   devServer: {
@@ -31,10 +31,6 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /\.html$/i,
-        loader: 'html-loader',
-      },
       {
         test: /\.css$/i,
         use: ['style-loader', 'css-loader'],
@@ -58,7 +54,7 @@ module.exports = {
       },
     ],
   },
-    optimization: {
-        runtimeChunk: 'single',
-    },
+  optimization: {
+    runtimeChunk: 'single',
+  },
 };

@@ -1,4 +1,4 @@
-import Reservations from '../src/Reservations.js';
+import Reservations from '../src/reservationModal/reservations.js';
 
 // Mock the FetchReservations class
 jest.mock('../src/fetchReservations.js', () => {
