@@ -11,7 +11,7 @@ export default class PostResevation {
 
   async postReservation(data) {
     try {
-      const response = await fetch(
+      await fetch(
         'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XTyHQABn3ej42SK28nbc/reservations',
         {
           method: 'POST',
@@ -30,7 +30,7 @@ export default class PostResevation {
     loadReservations.displayReservations(this.movieId);
   }
 
-  setupListener(){
+  setupListener() {
     this.reservationForm.addEventListener('submit', (e) => {
       e.preventDefault();
       const data = {
@@ -44,6 +44,6 @@ export default class PostResevation {
       this.username.value = '';
       this.startDate.value = '';
       this.endDate.value = '';
-    })
-  };
-};
+    });
+  }
+}

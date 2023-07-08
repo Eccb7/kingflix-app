@@ -25,5 +25,5 @@ const footerSection = new Footer();
 
 export {
   headerSection, footerSection, getMoviesData, reservationsModal, homeSection,
-  postReservationData, fetchedReservationData
+  postReservationData, fetchedReservationData,
 };

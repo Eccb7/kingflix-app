@@ -5,14 +5,14 @@ jest.mock('../src/fetchReservations.js', () =>
 {
   return jest.fn().mockImplementation(() => (
     {
-    fetchReservationsData: jest.fn().mockResolvedValue(
-      [
-        { id: 1, username: 'John', date_start: '2020-12-17', date_end: '2020-12-18' },
-        { id: 2, username: 'James', date_start: '2020-12-17', date_end: '2020-12-18' },
-        { id: 3, username: 'Peter', date_start: '2020-12-17', date_end: '2020-12-18' },
-      ]
-    ),
-  }
+      fetchReservationsData: jest.fn().mockResolvedValue(
+        [
+          { id: 1, username: 'John', date_start: '2020-12-17', date_end: '2020-12-18' },
+          { id: 2, username: 'James', date_start: '2020-12-17', date_end: '2020-12-18' },
+          { id: 3, username: 'Peter', date_start: '2020-12-17', date_end: '2020-12-18' },
+        ]
+      ),
+    }
   ));
 });
 

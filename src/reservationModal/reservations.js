@@ -56,8 +56,8 @@ export default class Reservations {
     this.reservationsSections = document.querySelectorAll('.reservationsSection');
     reservationCloseBtns.forEach((each) => each.addEventListener('click', () => {
       this.reservationsSections.forEach((each) => each.style.display = 'none');
-    }))
-  };
+    }));
+  }
 
   updateCounter(fetchedReservationArr) {
     // Updates counter
@@ -79,7 +79,7 @@ export default class Reservations {
 
     fetchedReservationArr.forEach((each) => {
       const reservation = document.createElement('p');
-      reservation.textContent =  `${each.date_start} - ${each.date_end} by ${each.username}`;
+      reservation.textContent = `${each.date_start} - ${each.date_end} by ${each.username}`;
       existingReservations.forEach((each) => {
         each.appendChild(reservation);
       });
