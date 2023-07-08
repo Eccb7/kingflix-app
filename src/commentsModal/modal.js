@@ -81,7 +81,7 @@ const createModal = (movie) => {
         commentsList.appendChild(listItem);
       });
     } catch (error) {
-      // console.log('Error:', error.message);
+      // give error
     }
   };
 
@@ -112,7 +112,7 @@ const createModal = (movie) => {
       commentInput.value = '';
       await updateComments();
     } catch (error) {
-      // console.log('Error:', error.message);
+      // give error
     }
   });
 
