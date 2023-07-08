@@ -191,7 +191,7 @@ You can deploy this project using the following procedure:
 
 - GitHub: [@geekelo](https://github.com/geekelo)
 - Twitter: [@Geekelo_xyz](https://twitter.com/Geekelo_xyz)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/eloghene-otiede)
+- LinkedIn: [eloghene-otiede](https://linkedin.com/in/eloghene-otiede)
 <!-- - [See Documentation of Author's inputs](./Documentation/Geekelo-input.md) -->
 
 👤 **Ojwang Briton**
@@ -199,6 +199,11 @@ You can deploy this project using the following procedure:
 - GitHub: [@Eccb7](https://github.com/Eccb7)
 - Twitter: [@briton_otieno4](https://twitter.com/briton_otieno4)
 - LinkedIn: [briton-otieno-ba6591244](https://linkedin.com/in/briton-otieno-ba6591244)
+
+👤 **Kingsley chidozie Igbor**
+
+- GitHub: [@Developer-Kingz](https://github.com/Developer-Kingz)
+- LinkedIn: [Developer-Kingz](https://www.linkedin.com/in/kingsley-igbor-14b04720b/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
