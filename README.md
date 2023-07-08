@@ -119,7 +119,7 @@ Head to the <a href="#live-demo">LIVE DEMO SECTION</a> for Live links and presen
 
 > View the live demo of this project by clicking the text below.
 
-- [See Live Demo](https://geekelo.github.io/awesome-books-webapp/)
+- [See Live Demo](https://geekelo.github.io/kingflix/dist)
 <!-- - [First Presenation Video](https://www.loom.com/share/719c333faa524c5db6930878f33b809b) -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -132,7 +132,7 @@ To get a local copy up and running, follow these steps.
 
 > Clone the repository
 ```
-git clone https://github.com/geekelo/awesome-books-webapp.git
+git clone https://github.com/geekelo/kingflix.git
 ```
 > And you are ready to begin your project
 
@@ -192,7 +192,7 @@ You can deploy this project using the following procedure:
 - GitHub: [@geekelo](https://github.com/geekelo)
 - Twitter: [@Geekelo_xyz](https://twitter.com/Geekelo_xyz)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/eloghene-otiede)
-- [See Documentation of Author's inputs](./Documentation/Geekelo-input.md)
+<!-- - [See Documentation of Author's inputs](./Documentation/Geekelo-input.md) -->
 
 👤 **Ojwang Briton**
 
