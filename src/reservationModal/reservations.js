@@ -105,7 +105,7 @@ export default class Reservations {
   // post data
   async postReservation(data, id) {
     try {
-      const response = await fetch(
+      await fetch(
         'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XTyHQABn3ej42SK28nbc/reservations',
         {
           method: 'POST',
@@ -113,17 +113,13 @@ export default class Reservations {
             'Content-type': 'application/json',
           },
           body: JSON.stringify(data),
-        }
+        },
       );
-
-      if (!response.ok) {
-        throw new Error('Unable to post reservation.');
-      }
-    this.displayReservations(id)
     } catch (error) {
-      console.error(error);
+      // return null;
     }
 
+    this.displayReservations(id);
   }
 
   setupListener(id) {
