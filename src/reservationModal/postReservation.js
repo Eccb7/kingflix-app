@@ -10,11 +10,11 @@ export default class PostResevation {
     this.setupListener();
   }
 
-  async postReservation(itemId, username, dateStart, dateEnd) {
+  async postReservation(itemId, userName, dateStart, dateEnd) {
     try {
       const data = {
         item_id: itemId,
-        username: username,
+        username: userName,
         date_start: dateStart,
         date_end: dateEnd,
       };
