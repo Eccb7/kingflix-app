@@ -10,8 +10,8 @@ import Home from './home.js';
 import Header from './header.js';
 import Footer from './footer.js';
 import PullMoviesData from './pullMovies.js';
-import PostReservation from './postReservations';
-import FetchReservations from './fetchReservations';
+import PostReservation from './postReservations.js';
+import FetchReservations from './fetchReservations.js';
 import Reservations from './reservations.js';
 
 const homeSection = new Home();
@@ -22,4 +22,7 @@ const postReservationData = new PostReservation();
 const reservationsModal = new Reservations();
 const footerSection = new Footer();
 
-export { headerSection, footerSection, getMoviesData, reservationsModal, homeSection, postReservationData, fetchedReservationData };
+export {
+    headerSection, footerSection, getMoviesData, reservationsModal, homeSection, postReservationData,
+    fetchedReservationData
+};

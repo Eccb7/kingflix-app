@@ -10,8 +10,8 @@ export default class FetchReservations {
       const result = await response.json();
       return result;
     } catch (error) {
-    return null;
+      return null;
     }
   }
 }
-  
+ 

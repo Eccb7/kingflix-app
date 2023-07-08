@@ -3,6 +3,7 @@ export default class Header {
     this.header = document.querySelector('header');
     this.createNavbar();
   }
+
   createNavbar() {
     const navBar = document.createElement('nav');
     navBar.innerHTML = `<img id="logo" src="./media-library/logo.png" alt="logo">

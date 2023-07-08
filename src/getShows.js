@@ -6,7 +6,7 @@ const getShows = async () => {
   try {
     const response = await fetch('https://api.tvmaze.com/shows/1/episodes');
     if (!response.ok) {
-        throw new Error(`Failed to fetch scores: ${response.status}`);
+      throw new Error(`Failed to fetch scores: ${response.status}`);
     }
     const json = await response.json();
     json.forEach((movie) => {
@@ -21,7 +21,7 @@ const getShows = async () => {
       const likes = document.createElement('div');
       likes.className = 'space';
       likes.innerHTML = `<p>${movie.name}</p>`;
-      likes.innerHTML += ` <p>5 likes</p>`;
+      likes.innerHTML += `<p>5 likes</p>`;
       likes.appendChild(loveImage);
       const button1 = document.createElement('button');
       button1.className = 'btn';

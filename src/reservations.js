@@ -7,10 +7,11 @@ export default class Reservations {
     this.body = document.querySelector('body');
     this.viewReservationsBtns = document.getElementsByClassName('viewReservations');
     this.fetchReservations = new FetchReservations();
+    this.reservationCount = 0;
     this.showReservations();
   }
 
-  async createReservationsModal(index) {  
+  async createReservationsModal(index) {
     const getMoviesDetails = new PullMoviesData();
     const moviesDetails = await getMoviesDetails.fetchMoviesData();
     const moviesDetailsArr = Array.from(moviesDetails);
@@ -27,8 +28,8 @@ export default class Reservations {
       </div>
 
       <div class="sectionContainers">
-        <h2 class="reservationsHeading headings">Reservations:</h2>
-        <div class="existingReservations"> No Resevations to show </div>
+        <h2 class="reservationsHeading headings">Reservations(${this.reservationCount}):</h2>
+        <div class="existingReservations"> </div>
       </div>
 
       <div class="sectionContainers">
@@ -68,11 +69,14 @@ export default class Reservations {
   
     // Clear existing reservations
     existingReservations.innerHTML = '';
-  
+    this.reservationCount = fetchedReservationArr.length;
+    const reservationsHeading = document.querySelectorAll('.reservationsHeading');
+    reservationsHeading.forEach((each) => each.textContent = `Reservations (${this.reservationCount})`)
+
     fetchedReservationArr.forEach((each) => {
       const reservation = document.createElement('p');
-      reservation.textContent = `${each.date_start} - ${each.date_end} by ${each.username}`;
-      existingReservations.forEach((each) => each.appendChild(reservation));
+      reservation.textContent =  `${each.date_start} - ${each.date_end} by ${each.username}`;
+      existingReservations.forEach((each) => each.appendChild(reservation))
     });
   }
 

@@ -29,7 +29,7 @@ export default class PostResevation {
       throw new Error('Unable to post');
     }
 
-    //update displayed reservations
+    // update displayed reservations
     const loadReservations = new Reservations();
     loadReservations.displayReservations(this.movieId);
   }
