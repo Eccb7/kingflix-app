@@ -72,8 +72,7 @@ const createModal = (movie) => {
   const updateComments = async () => {
     try {
       const comments = await getComments(movie.id);
-      const commentsCounter = document.getElementById('comments-counter');
-      commentsCounter.textContent = `Comments (${comments.length})`;
+      commentsCounter.innerText = `Comments (${comments.length})`;
       commentsList.innerHTML = '';
 
       comments.forEach((comment) => {
@@ -113,7 +112,7 @@ const createModal = (movie) => {
       commentInput.value = '';
       await updateComments();
     } catch (error) {
-    //   console.log('Error:', error.message);
+      // console.log('Error:', error.message);
     }
   });
 

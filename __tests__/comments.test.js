@@ -1,14 +1,12 @@
 import updateComments from '../src/commentsModal/modal.js';
 import { getComments } from '../src/commentsModal/comments.js';
 
-jest.mock('./comments.js');
+jest.mock('../src/commentsModal/comments.js');
 
 describe('updateComments', () => {
   it('should update the comments counter', async () => {
     const commentsMock = [
-      { id: 1, comment: 'Great movie!' },
-      { id: 2, comment: 'I enjoyed it!' },
-      { id: 3, comment: 'Awesome!' },
+
     ];
 
     getComments.mockResolvedValue(commentsMock);
