@@ -49,7 +49,6 @@ export default class Reservations {
 
     const postReservationData = new PostReservation();
     postReservationData.movieId = index;
-    // postReservationData.setupListener();
   }
 
   closeReservationModal(reservationCloseBtns) {

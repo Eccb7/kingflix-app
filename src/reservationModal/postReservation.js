@@ -1,8 +1,8 @@
-import DisplayAfterPost from './displayReservation.js';
+import DisplayAfterPost from '../reservationModal/displayReservation.js';
 
 export default class PostResevation {
   constructor() {
-    this.reservationForm = document.querySelector('.reservationForm');
+    this.reservationForm = document.querySelectorAll('.reservationForm');
     this.username = document.querySelector('#username');
     this.startDate = document.querySelector('#startDate');
     this.endDate = document.querySelector('#endDate');
@@ -10,8 +10,15 @@ export default class PostResevation {
     this.setupListener();
   }
 
-  async postReservation(data) {
+  async postReservation(item_id, username, date_start, date_end) {
     try {
+      const data = {
+        item_id: item_id,
+        username: username,
+        date_start: date_start,
+        date_end: date_end,
+      };
+
       const response = await fetch(
         'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XTyHQABn3ej42SK28nbc/reservations',
         {
@@ -24,7 +31,7 @@ export default class PostResevation {
       );
 
       if (response.ok) {
-        // console.log('ok');
+        // gives error;
       }
     } catch (error) {
       throw new Error('Unable to post');
@@ -36,18 +43,21 @@ export default class PostResevation {
   }
 
   setupListener() {
-    this.reservationForm.addEventListener('submit', (e) => {
+    const valueusername = document.querySelector('#username');
+    const valuestartDate = document.querySelector('#startDate');
+    const valueendDate = document.querySelector('#endDate');
+    this.reservationForm.forEach((each) => each.addEventListener('submit', (e) => {
       e.preventDefault();
-      const data = {
-        item_id: `item${this.movieId}`,
-        username: this.username.value,
-        date_start: this.startDate.value,
-        date_end: this.endDate.value,
-      };
-      this.postReservation(data);
-      this.username.value = '';
-      this.startDate.value = '';
-      this.endDate.value = '';
-    });
+
+      const item_id = `item${this.movieId}`;
+      const username = valueusername.value;
+      const date_start = valuestartDate.value;
+      const date_end = valueendDate.value;
+
+      this.postReservation(item_id, username, date_start, date_end);
+      console.log(item_id, username, date_start, date_end)
+    }));
+
+
   }
 }
